@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 )
@@ -13,5 +12,10 @@ func main() {
 	}
 	cmd := os.Args[1]
 
-	fmt.Println(cmd)
+	parser := Parser{}
+	search := Search{
+		parser: parser,
+	}
+
+	search.Search(cmd)
 }
