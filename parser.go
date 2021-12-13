@@ -15,9 +15,9 @@ func (p Parser) Parse(input string) (string, error) {
 
 	switch split[0] {
 	case "ggl":
-		res = "google.com/search?q=" + parseQuery(split[1])
+		res = "https://google.com/search?q=" + parseQuery(split[1])
 	case "ytb":
-		res = "youtube.com/results?search_query=" + parseQuery(split[1])
+		res = "https://youtube.com/results?search_query=" + parseQuery(split[1])
 	default:
 		return "", errors.New("Unsupported site.")
 	}

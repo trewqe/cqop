@@ -16,12 +16,12 @@ func TestParse(t *testing.T) {
 		input  string
 		expect string
 	}{
-		{input: "ggl/test", expect: "google.com/search?q=test"},
-		{input: "ggl/test space ing", expect: "google.com/search?q=test+space+ing"},
-		{input: "ggl/test   space     mult", expect: "google.com/search?q=test+++space+++++mult"},
-		{input: "ytb/test", expect: "youtube.com/results?search_query=test"},
-		{input: "ytb/test space ing", expect: "youtube.com/results?search_query=test+space+ing"},
-		{input: "ytb/test   space     mult", expect: "youtube.com/results?search_query=test+++space+++++mult"},
+		{input: "ggl/test", expect: "https://google.com/search?q=test"},
+		{input: "ggl/test space ing", expect: "https://google.com/search?q=test+space+ing"},
+		{input: "ggl/test   space     mult", expect: "https://google.com/search?q=test+++space+++++mult"},
+		{input: "ytb/test", expect: "https://youtube.com/results?search_query=test"},
+		{input: "ytb/test space ing", expect: "https://youtube.com/results?search_query=test+space+ing"},
+		{input: "ytb/test   space     mult", expect: "https://youtube.com/results?search_query=test+++space+++++mult"},
 	}
 
 	for _, test := range tests {
